@@ -1,7 +1,7 @@
-[![Latest Stable Version](https://poser.pugx.org/arrilot/laravel-widgets/v/stable.svg)](https://packagist.org/packages/arrilot/laravel-widgets/)
-[![Total Downloads](https://img.shields.io/packagist/dt/arrilot/laravel-widgets.svg?style=flat)](https://packagist.org/packages/arrilot/laravel-widgets)
-[![Build Status](https://img.shields.io/travis/arrilot/laravel-widgets/master.svg?style=flat)](https://travis-ci.org/arrilot/laravel-widgets)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/arrilot/laravel-widgets/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/arrilot/laravel-widgets/)
+[![Latest Stable Version](https://poser.pugx.org/artisancms/widgets/v/stable.svg)](https://packagist.org/packages/artisancms/widgets/)
+[![Total Downloads](https://img.shields.io/packagist/dt/artisancms/widgets.svg?style=flat)](https://packagist.org/packages/artisancms/widgets)
+[![Build Status](https://img.shields.io/travis/artisancms/widgets/master.svg?style=flat)](https://travis-ci.org/artisancms/widgets)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/artisancms/widgets/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/artisancms/widgets/)
 
 #Widgets for Laravel
 
@@ -9,7 +9,7 @@
 
 ## Installation
 
-1) Run ```composer require arrilot/laravel-widgets```
+1) Run ```composer require artisancms/widgets```
 
 2) Register a service provider in the `app.php` configuration file
 
