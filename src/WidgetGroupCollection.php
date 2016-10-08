@@ -1,8 +1,8 @@
 <?php
 
-namespace Arrilot\Widgets;
+namespace ArtisanCMS\Widgets;
 
-use Arrilot\Widgets\Contracts\ApplicationWrapperContract;
+use ArtisanCMS\Widgets\Contracts\ApplicationWrapperContract;
 
 class WidgetGroupCollection
 {

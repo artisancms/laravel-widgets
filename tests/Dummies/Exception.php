@@ -1,8 +1,8 @@
 <?php
 
-namespace Arrilot\Widgets\Test\Dummies;
+namespace ArtisanCMS\Widgets\Test\Dummies;
 
-use Arrilot\Widgets\AbstractWidget;
+use ArtisanCMS\Widgets\AbstractWidget;
 
 class Exception extends AbstractWidget
 {

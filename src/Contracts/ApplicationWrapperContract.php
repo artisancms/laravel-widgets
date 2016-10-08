@@ -1,6 +1,6 @@
 <?php
 
-namespace Arrilot\Widgets\Contracts;
+namespace ArtisanCMS\Widgets\Contracts;
 
 use Closure;
 

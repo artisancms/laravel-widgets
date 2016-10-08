@@ -1,8 +1,8 @@
 <?php
 
-namespace Arrilot\Widgets\Test\Dummies\Profile\TestNamespace;
+namespace ArtisanCMS\Widgets\Test\Dummies\Profile\TestNamespace;
 
-use Arrilot\Widgets\AbstractWidget;
+use ArtisanCMS\Widgets\AbstractWidget;
 
 class TestFeed extends AbstractWidget
 {

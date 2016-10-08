@@ -1,6 +1,6 @@
 <?php
 
-namespace Arrilot\Widgets\Factories;
+namespace ArtisanCMS\Widgets\Factories;
 
 class WidgetFactory extends AbstractWidgetFactory
 {

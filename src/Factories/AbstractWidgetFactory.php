@@ -1,12 +1,12 @@
 <?php
 
-namespace Arrilot\Widgets\Factories;
+namespace ArtisanCMS\Widgets\Factories;
 
-use Arrilot\Widgets\AbstractWidget;
-use Arrilot\Widgets\Contracts\ApplicationWrapperContract;
-use Arrilot\Widgets\Misc\InvalidWidgetClassException;
-use Arrilot\Widgets\Misc\ViewExpressionTrait;
-use Arrilot\Widgets\WidgetId;
+use ArtisanCMS\Widgets\AbstractWidget;
+use ArtisanCMS\Widgets\Contracts\ApplicationWrapperContract;
+use ArtisanCMS\Widgets\Misc\InvalidWidgetClassException;
+use ArtisanCMS\Widgets\Misc\ViewExpressionTrait;
+use ArtisanCMS\Widgets\WidgetId;
 
 abstract class AbstractWidgetFactory
 {
@@ -116,8 +116,8 @@ abstract class AbstractWidgetFactory
         $fqcn = $rootNamespace.'\\'.$this->widgetName;
         $widgetClass = class_exists($fqcn) ? $fqcn : $this->widgetName;
 
-        if (!is_subclass_of($widgetClass, 'Arrilot\Widgets\AbstractWidget')) {
-            throw new InvalidWidgetClassException('Class "'.$widgetClass.'" must extend "Arrilot\Widgets\AbstractWidget" class');
+        if (!is_subclass_of($widgetClass, 'ArtisanCMS\Widgets\AbstractWidget')) {
+            throw new InvalidWidgetClassException('Class "'.$widgetClass.'" must extend "ArtisanCMS\Widgets\AbstractWidget" class');
         }
 
         $this->widget = new $widgetClass($this->widgetConfig);

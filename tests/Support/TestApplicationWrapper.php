@@ -1,10 +1,10 @@
 <?php
 
-namespace Arrilot\Widgets\Test\Support;
+namespace ArtisanCMS\Widgets\Test\Support;
 
-use Arrilot\Widgets\Contracts\ApplicationWrapperContract;
-use Arrilot\Widgets\Factories\AsyncWidgetFactory;
-use Arrilot\Widgets\Factories\WidgetFactory;
+use ArtisanCMS\Widgets\Contracts\ApplicationWrapperContract;
+use ArtisanCMS\Widgets\Factories\AsyncWidgetFactory;
+use ArtisanCMS\Widgets\Factories\WidgetFactory;
 use Closure;
 use Doctrine\Instantiator\Exception\InvalidArgumentException;
 
@@ -16,7 +16,7 @@ class TestApplicationWrapper implements ApplicationWrapperContract
      * @var array
      */
     public $config = [
-        'laravel-widgets.default_namespace'         => 'Arrilot\Widgets\Test\Dummies',
+        'laravel-widgets.default_namespace'         => 'ArtisanCMS\Widgets\Test\Dummies',
         'laravel-widgets.use_jquery_for_ajax_calls' => true,
     ];
 
@@ -84,11 +84,11 @@ class TestApplicationWrapper implements ApplicationWrapperContract
      */
     public function make($abstract, array $parameters = [])
     {
-        if ($abstract == 'arrilot.widget') {
+        if ($abstract == 'artisancms.widget') {
             return new WidgetFactory($this);
         }
 
-        if ($abstract == 'arrilot.async-widget') {
+        if ($abstract == 'artisancms.async-widget') {
             return new AsyncWidgetFactory($this);
         }
 

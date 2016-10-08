@@ -1,11 +1,11 @@
 <?php
 
-namespace Arrilot\Widgets;
+namespace ArtisanCMS\Widgets;
 
-use Arrilot\Widgets\Console\WidgetMakeCommand;
-use Arrilot\Widgets\Factories\AsyncWidgetFactory;
-use Arrilot\Widgets\Factories\WidgetFactory;
-use Arrilot\Widgets\Misc\LaravelApplicationWrapper;
+use ArtisanCMS\Widgets\Console\WidgetMakeCommand;
+use ArtisanCMS\Widgets\Factories\AsyncWidgetFactory;
+use ArtisanCMS\Widgets\Factories\WidgetFactory;
+use ArtisanCMS\Widgets\Misc\LaravelApplicationWrapper;
 use Illuminate\Console\AppNamespaceDetectorTrait;
 use Illuminate\Support\Facades\Blade;
 
@@ -24,15 +24,15 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__.'/config/config.php', 'laravel-widgets'
         );
 
-        $this->app->bind('arrilot.widget', function () {
+        $this->app->bind('artisancms.widget', function () {
             return new WidgetFactory(new LaravelApplicationWrapper());
         });
 
-        $this->app->bind('arrilot.async-widget', function () {
+        $this->app->bind('artisancms.async-widget', function () {
             return new AsyncWidgetFactory(new LaravelApplicationWrapper());
         });
 
-        $this->app->singleton('arrilot.widget-group-collection', function () {
+        $this->app->singleton('artisancms.widget-group-collection', function () {
             return new WidgetGroupCollection(new LaravelApplicationWrapper());
         });
 
@@ -42,9 +42,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this->commands('command.widget.make');
 
-        $this->app->alias('arrilot.widget', 'Arrilot\Widgets\Factories\WidgetFactory');
-        $this->app->alias('arrilot.async-widget', 'Arrilot\Widgets\Factories\AsyncWidgetFactory');
-        $this->app->alias('arrilot.widget-group-collection', 'Arrilot\Widgets\WidgetGroupCollection');
+        $this->app->alias('artisancms.widget', 'ArtisanCMS\Widgets\Factories\WidgetFactory');
+        $this->app->alias('artisancms.async-widget', 'ArtisanCMS\Widgets\Factories\AsyncWidgetFactory');
+        $this->app->alias('artisancms.widget-group-collection', 'ArtisanCMS\Widgets\WidgetGroupCollection');
     }
 
     /**
@@ -59,8 +59,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         ]);
 
         $routeConfig = [
-            'namespace'  => 'Arrilot\Widgets\Controllers',
-            'prefix'     => 'arrilot',
+            'namespace'  => 'ArtisanCMS\Widgets\Controllers',
+            'prefix'     => 'artisancms',
             'middleware' => $this->app['config']->get('laravel-widgets.route_middleware', []),
         ];
 
@@ -75,19 +75,19 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         Blade::directive('widget', function ($expression) use ($omitParenthesis) {
             $expression = $omitParenthesis ? $expression : "($expression)";
 
-            return "<?php echo app('arrilot.widget')->run{$expression}; ?>";
+            return "<?php echo app('artisancms.widget')->run{$expression}; ?>";
         });
 
         Blade::directive('asyncWidget', function ($expression) use ($omitParenthesis) {
             $expression = $omitParenthesis ? $expression : "($expression)";
 
-            return "<?php echo app('arrilot.async-widget')->run{$expression}; ?>";
+            return "<?php echo app('artisancms.async-widget')->run{$expression}; ?>";
         });
 
         Blade::directive('widgetGroup', function ($expression) use ($omitParenthesis) {
             $expression = $omitParenthesis ? $expression : "($expression)";
 
-            return "<?php echo app('arrilot.widget-group-collection')->group{$expression}->display(); ?>";
+            return "<?php echo app('artisancms.widget-group-collection')->group{$expression}->display(); ?>";
         });
     }
 
@@ -98,6 +98,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function provides()
     {
-        return ['arrilot.widget', 'arrilot.async-widget'];
+        return ['artisancms.widget', 'artisancms.async-widget'];
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace Arrilot\Widgets\Test;
+namespace ArtisanCMS\Widgets\Test;
 
-use Arrilot\Widgets\Factories\WidgetFactory;
-use Arrilot\Widgets\Test\Dummies\TestCachedWidget;
-use Arrilot\Widgets\Test\Support\TestApplicationWrapper;
-use Arrilot\Widgets\Test\Support\TestCase;
+use ArtisanCMS\Widgets\Factories\WidgetFactory;
+use ArtisanCMS\Widgets\Test\Dummies\TestCachedWidget;
+use ArtisanCMS\Widgets\Test\Support\TestApplicationWrapper;
+use ArtisanCMS\Widgets\Test\Support\TestCase;
 
 class WidgetFactoryTest extends TestCase
 {
@@ -21,7 +21,7 @@ class WidgetFactoryTest extends TestCase
 
     public function testItThrowsExceptionForBadWidgetClass()
     {
-        $this->setExpectedException('\Arrilot\Widgets\Misc\InvalidWidgetClassException');
+        $this->setExpectedException('\ArtisanCMS\Widgets\Misc\InvalidWidgetClassException');
 
         $this->factory->run('testBadSlider');
     }
@@ -63,7 +63,7 @@ class WidgetFactoryTest extends TestCase
 
     public function testItCanRunWidgetsUsingFQCN()
     {
-        $output = $this->factory->run('\Arrilot\Widgets\Test\Dummies\TestDefaultSlider');
+        $output = $this->factory->run('\ArtisanCMS\Widgets\Test\Dummies\TestDefaultSlider');
 
         $this->assertEquals('Default test slider was executed with $slides = 6', $output);
     }
@@ -109,12 +109,12 @@ class WidgetFactoryTest extends TestCase
         $output = $this->factory->run('testRepeatableFeed');
 
         $this->assertEquals(
-            '<div id="arrilot-widget-container-1" style="display:inline" class="arrilot-widget-container">Feed was executed with $slides = 6'.
+            '<div id="artisancms-widget-container-1" style="display:inline" class="artisancms-widget-container">Feed was executed with $slides = 6'.
                 '<script type="text/javascript">'.
                     'setTimeout( function() {'.
                         'var widgetTimer1 = setInterval(function() {'.
                             'if (window.$) {'.
-                                "$('#arrilot-widget-container-1').load('".$this->ajaxUrl('TestRepeatableFeed')."');".
+                                "$('#artisancms-widget-container-1').load('".$this->ajaxUrl('TestRepeatableFeed')."');".
                                 'clearInterval(widgetTimer1);'.
                             '}'.
                         '}, 100);'.
@@ -128,12 +128,12 @@ class WidgetFactoryTest extends TestCase
         $output = $this->factory->run('testWidgetWithCustomContainer');
 
         $this->assertEquals(
-            '<p id="arrilot-widget-container-1" data-id="123">Dummy Content'.
+            '<p id="artisancms-widget-container-1" data-id="123">Dummy Content'.
                 '<script type="text/javascript">'.
                     'setTimeout( function() {'.
                         'var widgetTimer1 = setInterval(function() {'.
                             'if (window.$) {'.
-                                "$('#arrilot-widget-container-1').load('".$this->ajaxUrl('TestWidgetWithCustomContainer')."');".
+                                "$('#artisancms-widget-container-1').load('".$this->ajaxUrl('TestWidgetWithCustomContainer')."');".
                                 'clearInterval(widgetTimer1);'.
                             '}'.
                         '}, 100);'.
@@ -146,7 +146,7 @@ class WidgetFactoryTest extends TestCase
     {
         $output = $this->factory->run('testCachedWidget', ['foo' => 'bar']);
 
-        $key = 'arrilot.widgets.'.serialize(['testCachedWidget', ['foo' => 'bar']]);
+        $key = 'artisancms.widgets.'.serialize(['testCachedWidget', ['foo' => 'bar']]);
         $widget = new TestCachedWidget();
 
         $this->assertEquals('Cached output. Key: '.$key.', minutes: '.$widget->cacheTime, $output);

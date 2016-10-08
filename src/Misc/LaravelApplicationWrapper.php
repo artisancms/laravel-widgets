@@ -1,8 +1,8 @@
 <?php
 
-namespace Arrilot\Widgets\Misc;
+namespace ArtisanCMS\Widgets\Misc;
 
-use Arrilot\Widgets\Contracts\ApplicationWrapperContract;
+use ArtisanCMS\Widgets\Contracts\ApplicationWrapperContract;
 use Closure;
 use Illuminate\Console\AppNamespaceDetectorTrait;
 use Illuminate\Container\Container;

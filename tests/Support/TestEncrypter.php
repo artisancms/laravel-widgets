@@ -1,6 +1,6 @@
 <?php
 
-namespace Arrilot\Widgets\Test\Support;
+namespace ArtisanCMS\Widgets\Test\Support;
 
 class TestEncrypter
 {

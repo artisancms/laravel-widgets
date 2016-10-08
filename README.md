@@ -3,6 +3,8 @@
 [![Build Status](https://img.shields.io/travis/artisancms/widgets/master.svg?style=flat)](https://travis-ci.org/artisancms/widgets)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/artisancms/widgets/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/artisancms/widgets/)
 
+
+https://img.shields.io/github/issues/artisancms/widgets.svg
 #Widgets for Laravel
 
 *A powerful alternative to view composers. Asynchronous widgets, reloadable widgets, console generator, caching - everything you can think of.*
@@ -18,7 +20,7 @@
 
 'providers' => [
     ...
-    Arrilot\Widgets\ServiceProvider::class,
+    ArtisanCMS\Widgets\ServiceProvider::class,
 ],
 ?>
 ```
@@ -30,8 +32,8 @@
 
 'aliases' => [
     ...
-    'Widget'       => Arrilot\Widgets\Facade::class,
-    'AsyncWidget'  => Arrilot\Widgets\AsyncFacade::class,
+    'Widget'       => ArtisanCMS\Widgets\Facade::class,
+    'AsyncWidget'  => ArtisanCMS\Widgets\AsyncFacade::class,
 ],
 ?>
 ```
@@ -57,7 +59,7 @@ Add "--plain" option if you do not need a view.
 
 namespace App\Widgets;
 
-use Arrilot\Widgets\AbstractWidget;
+use ArtisanCMS\Widgets\AbstractWidget;
 
 class RecentNews extends AbstractWidget
 {
@@ -182,7 +184,7 @@ public function run($sortBy, $sortOrder) { }
 
 By default the package tries to find your widget in the ```App\Widgets``` namespace.
 
-You can override this by publishing package config (```php artisan vendor:publish --provider="Arrilot\Widgets\ServiceProvider"```) and setting `default_namespace` property.
+You can override this by publishing package config (```php artisan vendor:publish --provider="ArtisanCMS\Widgets\ServiceProvider"```) and setting `default_namespace` property.
 
 Although using the default namespace is very convenient, in some cases you may wish to have more flexibility. 
 For example, if you've got dozens of widgets it makes sense to group them in namespaced folders.
@@ -226,7 +228,7 @@ public function placeholder()
 }
 ```
 
-> Side note: If you need to do smth with the routes package uses to load async widgets (e.g. you run app in a subfolder http://site.com/app/) you need to copy Arrilot\Widgets\ServiceProvider to your app, modify it according to your needs and register it in Laravel instead of the former one.
+> Side note: If you need to do smth with the routes package uses to load async widgets (e.g. you run app in a subfolder http://site.com/app/) you need to copy ArtisanCMS\Widgets\ServiceProvider to your app, modify it according to your needs and register it in Laravel instead of the former one.
 
 ## Reloadable widgets
 
@@ -267,7 +269,7 @@ This container is defined by `AbstractWidget::container()` method and can be cus
     {
         return [
             'element'       => 'div',
-            'attributes'    => 'style="display:inline" class="arrilot-widget-container"',
+            'attributes'    => 'style="display:inline" class="artisancms-widget-container"',
         ];
     }
 ```

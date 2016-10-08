@@ -1,9 +1,9 @@
 <?php
 
-namespace Arrilot\Widgets\Controllers;
+namespace ArtisanCMS\Widgets\Controllers;
 
-use Arrilot\Widgets\Factories\AbstractWidgetFactory;
-use Arrilot\Widgets\WidgetId;
+use ArtisanCMS\Widgets\Factories\AbstractWidgetFactory;
+use ArtisanCMS\Widgets\WidgetId;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 
@@ -20,7 +20,7 @@ class WidgetController extends BaseController
     {
         $this->prepareGlobals($request);
 
-        $factory = app()->make('arrilot.widget');
+        $factory = app()->make('artisancms.widget');
         $widgetName = $request->input('name', '');
         $widgetParams = $factory->decryptWidgetParams($request->input('params', ''));
 

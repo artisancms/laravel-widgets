@@ -1,8 +1,8 @@
 <?php
 
-namespace Arrilot\Widgets\Factories;
+namespace ArtisanCMS\Widgets\Factories;
 
-use Arrilot\Widgets\WidgetId;
+use ArtisanCMS\Widgets\WidgetId;
 
 class JavascriptFactory
 {
@@ -18,7 +18,7 @@ class JavascriptFactory
      *
      * @var string
      */
-    protected $ajaxLink = '/arrilot/load-widget';
+    protected $ajaxLink = '/artisancms/load-widget';
 
     /**
      * @param $widgetFactory
@@ -67,7 +67,7 @@ class JavascriptFactory
      */
     public function getContainerId()
     {
-        return 'arrilot-widget-container-'.WidgetId::get();
+        return 'artisancms-widget-container-'.WidgetId::get();
     }
 
     /**

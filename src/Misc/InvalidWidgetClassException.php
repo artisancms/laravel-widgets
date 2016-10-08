@@ -1,6 +1,6 @@
 <?php
 
-namespace Arrilot\Widgets\Misc;
+namespace ArtisanCMS\Widgets\Misc;
 
 use Exception;
 
@@ -11,5 +11,5 @@ class InvalidWidgetClassException extends Exception
      *
      * @var string
      */
-    protected $message = 'Widget class must extend Arrilot\Widgets\AbstractWidget class';
+    protected $message = 'Widget class must extend ArtisanCMS\Widgets\AbstractWidget class';
 }

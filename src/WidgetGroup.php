@@ -1,9 +1,9 @@
 <?php
 
-namespace Arrilot\Widgets;
+namespace ArtisanCMS\Widgets;
 
-use Arrilot\Widgets\Contracts\ApplicationWrapperContract;
-use Arrilot\Widgets\Misc\ViewExpressionTrait;
+use ArtisanCMS\Widgets\Contracts\ApplicationWrapperContract;
+use ArtisanCMS\Widgets\Misc\ViewExpressionTrait;
 
 class WidgetGroup
 {
@@ -206,7 +206,7 @@ class WidgetGroup
      */
     protected function displayWidget($widget)
     {
-        $factory = $this->app->make($widget['type'] === 'sync' ? 'arrilot.widget' : 'arrilot.async-widget');
+        $factory = $this->app->make($widget['type'] === 'sync' ? 'artisancms.widget' : 'artisancms.async-widget');
 
         return call_user_func_array([$factory, 'run'], $widget['arguments']);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Arrilot\Widgets;
+namespace ArtisanCMS\Widgets;
 
 abstract class AbstractWidget
 {
@@ -60,7 +60,7 @@ abstract class AbstractWidget
     {
         return [
             'element'       => 'div',
-            'attributes'    => 'style="display:inline" class="arrilot-widget-container"',
+            'attributes'    => 'style="display:inline" class="artisancms-widget-container"',
         ];
     }
 
@@ -73,7 +73,7 @@ abstract class AbstractWidget
      */
     public function cacheKey(array $params = [])
     {
-        return 'arrilot.widgets.'.serialize($params);
+        return 'artisancms.widgets.'.serialize($params);
     }
 
     /**

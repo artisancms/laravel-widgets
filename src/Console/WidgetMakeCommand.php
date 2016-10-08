@@ -1,6 +1,6 @@
 <?php
 
-namespace Arrilot\Widgets\Console;
+namespace ArtisanCMS\Widgets\Console;
 
 use Illuminate\Console\AppNamespaceDetectorTrait;
 use Illuminate\Console\GeneratorCommand;
@@ -22,7 +22,7 @@ class WidgetMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new widget (arrilot/laravel-widgets)';
+    protected $description = 'Create a new widget (artisancms/widgets)';
 
     /**
      * The type of class being generated.

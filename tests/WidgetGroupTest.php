@@ -1,10 +1,10 @@
 <?php
 
-namespace Arrilot\Widgets\Test;
+namespace ArtisanCMS\Widgets\Test;
 
-use Arrilot\Widgets\Test\Support\TestApplicationWrapper;
-use Arrilot\Widgets\Test\Support\TestCase;
-use Arrilot\Widgets\WidgetGroup;
+use ArtisanCMS\Widgets\Test\Support\TestApplicationWrapper;
+use ArtisanCMS\Widgets\Test\Support\TestCase;
+use ArtisanCMS\Widgets\WidgetGroup;
 
 class WidgetGroupTest extends TestCase
 {
@@ -27,11 +27,11 @@ class WidgetGroupTest extends TestCase
 
         $this->assertEquals(
             'Slider was executed with $slides = 5 foo: bar'.
-            '<div id="arrilot-widget-container-2" style="display:inline" class="arrilot-widget-container">Placeholder here!'.
+            '<div id="artisancms-widget-container-2" style="display:inline" class="artisancms-widget-container">Placeholder here!'.
                 '<script type="text/javascript">'.
                     'var widgetTimer2 = setInterval(function() {'.
                         'if (window.$) {'.
-                            "$('#arrilot-widget-container-2').load('".$this->ajaxUrl('Slider', [], 2)."');".
+                            "$('#artisancms-widget-container-2').load('".$this->ajaxUrl('Slider', [], 2)."');".
                             'clearInterval(widgetTimer2);'.
                         '}'.
                     '}, 100);'.
@@ -82,11 +82,11 @@ class WidgetGroupTest extends TestCase
         $this->assertEquals(
             'Slider was executed with $slides = 5 foo: bar'.
             '<hr>'.
-            '<div id="arrilot-widget-container-2" style="display:inline" class="arrilot-widget-container">Placeholder here!'.
+            '<div id="artisancms-widget-container-2" style="display:inline" class="artisancms-widget-container">Placeholder here!'.
                 '<script type="text/javascript">'.
                     'var widgetTimer2 = setInterval(function() {'.
                         'if (window.$) {'.
-                            "$('#arrilot-widget-container-2').load('".$this->ajaxUrl('Slider', [], 2)."');".
+                            "$('#artisancms-widget-container-2').load('".$this->ajaxUrl('Slider', [], 2)."');".
                             'clearInterval(widgetTimer2);'.
                         '}'.
                     '}, 100);'.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Arrilot\Widgets\Misc;
+namespace ArtisanCMS\Widgets\Misc;
 
 use Illuminate\Support\HtmlString;
 

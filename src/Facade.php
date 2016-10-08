@@ -1,12 +1,12 @@
 <?php
 
-namespace Arrilot\Widgets;
+namespace ArtisanCMS\Widgets;
 
 class Facade extends \Illuminate\Support\Facades\Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'arrilot.widget';
+        return 'artisancms.widget';
     }
 
     /**
@@ -18,6 +18,6 @@ class Facade extends \Illuminate\Support\Facades\Facade
      */
     public static function group($name)
     {
-        return app('arrilot.widget-group-collection')->group($name);
+        return app('artisancms.widget-group-collection')->group($name);
     }
 }

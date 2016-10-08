@@ -1,6 +1,6 @@
 <?php
 
-namespace Arrilot\Widgets\Test\Dummies;
+namespace ArtisanCMS\Widgets\Test\Dummies;
 
 class TestBadSlider
 {

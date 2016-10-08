@@ -1,6 +1,6 @@
 <?php
 
-namespace Arrilot\Widgets;
+namespace ArtisanCMS\Widgets;
 
 class WidgetId
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Arrilot\Widgets\Test;
+namespace ArtisanCMS\Widgets\Test;
 
-use Arrilot\Widgets\Test\Support\TestApplicationWrapper;
-use Arrilot\Widgets\Test\Support\TestCase;
-use Arrilot\Widgets\WidgetGroup;
-use Arrilot\Widgets\WidgetGroupCollection;
+use ArtisanCMS\Widgets\Test\Support\TestApplicationWrapper;
+use ArtisanCMS\Widgets\Test\Support\TestCase;
+use ArtisanCMS\Widgets\WidgetGroup;
+use ArtisanCMS\Widgets\WidgetGroupCollection;
 
 class WidgetGroupCollectionTest extends TestCase
 {
